@@ -1,13 +1,15 @@
 (function () {
   chrome.runtime.onMessage
-    .addListener(function (sum) {
-      document.getElementById('J-bg-msg').innerText = sum;
+    .addListener(function (msg) {
+      document.getElementById('J-bg-msg').innerText = msg;
     });
   document.getElementById('J-btn')
     .addEventListener('click', function () {
       // background对应事件等这个函数执行完后才会触发
-      // newtab和background共享一个线程
       chrome.runtime.sendMessage('msg');
+
+      // 扩展的所有newtab和扩展的background共享一个js线程
+
       var startTime = new Date().toLocaleTimeString();
       var i = 5000000000;
       var sum = 0;

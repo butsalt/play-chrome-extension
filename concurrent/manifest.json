@@ -10,6 +10,16 @@
   "chrome_url_overrides" : {
     "newtab": "newtab/newtab.html"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.baidu.com/*"
+      ],
+      "js": [
+        "content/content.js"
+      ]
+    }
+  ],
   "permissions": [
   ]
 }

@@ -7,5 +7,6 @@ chrome.runtime.onMessage
       sum += i;
     }
     var endTime = new Date().toLocaleTimeString();
+    console.log('bg msg: start: ' + startTime + ', end: ' + endTime);
     chrome.runtime.sendMessage('start: ' + startTime + ', end: ' + endTime);
   });
