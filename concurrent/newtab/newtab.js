@@ -5,10 +5,10 @@
     });
   document.getElementById('J-btn')
     .addEventListener('click', function () {
-      // background对应事件等这个函数执行完后才会触发
-      chrome.runtime.sendMessage('msg');
-
       // 扩展的所有newtab和扩展的background共享一个js线程
+
+      // 等当前函数执行完后，位于background的listener才能被执行
+      chrome.runtime.sendMessage('msg');
 
       var startTime = new Date().toLocaleTimeString();
       var i = 5000000000;
@@ -18,6 +18,7 @@
       }
       var endTime = new Date().toLocaleTimeString();
       document.getElementById('J-newtab-msg').innerText = 'start: ' + startTime + ', end: ' + endTime;
+
       setTimeout(function () {
         var startTime = new Date().toLocaleTimeString();
         var i = 5000000000;
