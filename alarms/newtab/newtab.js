@@ -6,8 +6,7 @@
 
   document.getElementById('J-btn')
     .addEventListener('click', function () {
-      // 创建alarm后，即使newtab关了或者已跳转到其他页面
-      // 只要chrome还没关，alarm到时间后还是会fire
+      // 创建alarm后，只要扩展没有被卸载，即使是重新加载，alarm仍然存在
       chrome.alarms.create('newtab', {
         delayInMinutes: 1
       });
