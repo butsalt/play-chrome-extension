@@ -4,7 +4,7 @@
   "version": "1.0",
   "background": {
     "scripts": ["background/background.js"],
-    "persistent": true
+    "persistent": false
   },
   "minimum_chrome_version":"36",
   "chrome_url_overrides" : {

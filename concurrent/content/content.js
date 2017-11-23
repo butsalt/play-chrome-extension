@@ -8,7 +8,7 @@
 
   btn.addEventListener('click', function () {
     // content和被注入的页面共享一个js线程
-    // content和扩展本身(包括background，newtab)不共享js线程
+    // content和扩展本身(包括background，popup，newtab)不共享js线程
 
     // 发送事件后，位于background的listener立即开始执行
     // 当前函数也同时在执行

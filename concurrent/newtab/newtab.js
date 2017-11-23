@@ -5,7 +5,7 @@
     });
   document.getElementById('J-btn')
     .addEventListener('click', function () {
-      // 扩展的所有newtab和扩展的background共享一个js线程
+      // 扩展的所有newtab，popup和扩展的background共享一个js线程
 
       // 等当前函数执行完后，位于background的listener才能被执行
       chrome.runtime.sendMessage('msg');
