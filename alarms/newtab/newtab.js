@@ -6,7 +6,8 @@
 
   document.getElementById('J-btn')
     .addEventListener('click', function () {
-      // 创建alarm后，只要扩展没有被卸载，即使是重新加载，alarm仍然存在
+      // 创建alarm后，只要扩展没有被删除
+      // 重新加载扩展，停用再启用扩展，重开chrome，alarm仍然存在
       chrome.alarms.create('newtab', {
         delayInMinutes: 1
       });
