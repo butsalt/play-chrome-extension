@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    在manifest_version 2，csp默认为script-src 'self'; object-src 'self'。即没有对img-src进行约束。
+    本例中，因为在csp中声明了img-src，那么需在值中声明'http://localhost:3000'（只声明'http:'也可以），才可以访问对应资源。
+   -->
+  <img src="http://localhost:3000/assets/img/maple-small.jpg"/>
+  <script src="./newtab.js"></script>
+</body>
+</html>
