@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "inject",
+  "version": "1.0",
+  "browser_action": {
+
+  },
+  "background": {
+    "scripts": ["background/background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "http://localhost:3000/"
+  ]
+}
