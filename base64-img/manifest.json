@@ -1,9 +1,11 @@
 {
   "manifest_version": 2,
-  "chrome_url_overrides": {
-    "newtab": "index.html"
+  "name": "base64-img",
+  "background": {
+    "scripts": [
+      "background/index.js"
+    ]
   },
-  "name": "storage-performance",
   "permissions": [
     "storage",
     "unlimitedStorage"
