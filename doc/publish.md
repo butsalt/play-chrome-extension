@@ -1,0 +1,6 @@
+* 扩展发布时检查文本长度时单位是字符
+* chrome扩展发布时只检查default_locale下的文本长度
+* firefox扩展发布时检查所有语言下的文本长度
+* 如果在permissions中新增重要权限，比如tabs，chrome会禁用扩展直到用户主动开启扩展，firefox会提醒用户是否允许新权限
+* 如果在permissions中新增不重要权限，比如activeTab，扩展不会禁用或提示需要新的权限
+* 在optional_permissions新增任何权限，扩展都不会禁用或提示需要新的权限
