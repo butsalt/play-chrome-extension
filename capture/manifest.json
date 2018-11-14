@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "capture",
+  "chrome_url_overrides": {
+    "newtab": "pages/newtab.html"
+  },
+  "background": {
+    "page": "pages/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "version": "1.0.0"
+}
